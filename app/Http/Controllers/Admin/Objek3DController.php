@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Objek3d;
+use App\Models\Objek3D;
 use Illuminate\Support\Facades\Storage;
 
 class Objek3DController extends Controller
 {
     public function index()
     {
-        $objek3d = Objek3d::latest()->get();
+        $objek3d = Objek3D::latest()->get();
         return view('admin.objek3d.index', compact('objek3d'));
     }
 
